@@ -20,7 +20,7 @@ jobs:
       - name: Run PyInstaller
         run: |
           python3 -m PyInstaller bulk_excel_to_pdf.spec
-      - uses: actions/upload_artifact@v2
+      - uses: actions/upload-artifact@v2
         with: 
           name: windows_bulkexcel
           path: dist/bulk_excel_to_pdf.exe

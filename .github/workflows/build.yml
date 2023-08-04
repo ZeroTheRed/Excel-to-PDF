@@ -1,4 +1,4 @@
-name: Bulk Excel Converter for Windows
+name: Bulk Excel Converter
 
 on:
   push:

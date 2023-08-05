@@ -13,7 +13,7 @@ def process_sheet(file, sheet=None, num=None):
     test_file = test_file.fillna(value=' ')
     test_file.columns = pd.Series([np.nan if "Unnamed: " in x else x for x in test_file.columns.values]).fillna(value=" ").values.flatten()
     test_file.to_html("test.html")
-    pdfkit.from_file("test.html", f"test{num}.pdf", options={"page-width": '20in',
+    pdfkit.from_file("test.html", f"{sheet}.pdf", options={"page-width": '20in',
                                                         "page-height": '15in'})  
     print(f"Converted {file} to PDF -- test{num}.pdf")
 
